@@ -1,5 +1,6 @@
-Ionic App Base
-=====================
+
+Receptbank
+Ionic - Angular - Firebase - app
 
 A starting project for Ionic that optionally supports using custom SCSS.
 
