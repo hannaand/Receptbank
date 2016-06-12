@@ -7,6 +7,19 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
 
+// här under skapar vi vår config funktion och klistrar in det som vi kopierade från firebase
+.config(function() {
+
+  var config = {
+    apiKey: "AIzaSyAzLTXKnV_II27FGaiSX_xJrCOae4tiAig",
+    authDomain: "recepieapp.firebaseapp.com",
+    databaseURL: "https://recepieapp.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+
+})
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
