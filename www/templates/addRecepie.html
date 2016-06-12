@@ -1,12 +1,14 @@
 <ion-view title="Lägg till recept" id="page1" class=" ">
-    <ion-content padding="true" class="has-header">
+<br>
+    <br>
+        <br>
         <form ng-submit="add()" id="addRecepie-form2" class="list ">
             <label class="item item-input " id="addRecepie-input3">
-                <input ng-model="recepie.dish" type="text" placeholder="Maträtt">
+                <input ng-model="dish.recepie" type="text" placeholder="Maträtt">
             </label>
             <label class="item item-select " id="addRecepie-select1">
                 <span class="input-label">Kategori</span>
-                <select ng-model="recepie.category">
+                <select ng-model="category.recepie">
                     <option></option>
                     <option>test</option>
                     <option>test</option>
@@ -14,15 +16,14 @@
                 </select>
             </label>
             <label class="item item-input " id="addRecepie-textarea1">
-                <span class="input-label">Tre nyckelord</span><textarea ng-model="word.dish" placeholder=""></textarea>
+                <input ng-model="dish.word1" type="text" placeholder="Tre"><input ng-model="dish.word2" type="text" placeholder="beskrivande"><input ng-model="dish.word3" type="text" placeholder="ord">
             </label>
             <label class="item item-input " id="addRecepie-textarea3">
-                <span class="input-label">Ingredienser</span><textarea ng-model="ingredient.dish" placeholder=""></textarea>
+                <span class="input-label"></span><textarea ng-model="dish.ingredient" placeholder="Ingredienser"></textarea>
             </label>
             <label class="item item-input " id="addRecepie-textarea2">
-                <span class="input-label">Instruktioner</span><textarea ng-model="instruction.dish" placeholder=""></textarea>
+                <span class="input-label"></span><textarea ng-model="dish.instruction" placeholder="Instruktioner"></textarea>
             </label>
         </form>
         <button id="addRecepie-button1" class=" button button-positive  button-block " type="submit" ng-click="addDish">Lägg till!</button>
-    </ion-content>
 </ion-view>
