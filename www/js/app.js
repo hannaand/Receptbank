@@ -14,7 +14,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
     apiKey: "AIzaSyAzLTXKnV_II27FGaiSX_xJrCOae4tiAig",
     authDomain: "recepieapp.firebaseapp.com",
     databaseURL: "https://recepieapp.firebaseio.com",
-    storageBucket: "",
+    storageBucket: "recepieapp.appspot.com",
   };
   firebase.initializeApp(config);
 

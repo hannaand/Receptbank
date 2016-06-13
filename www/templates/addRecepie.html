@@ -1,29 +1,31 @@
 <ion-view title="Lägg till recept" id="page1" class=" ">
 <br>
     <br>
-        <br>
-        <form ng-submit="add()" id="addRecepie-form2" class="list ">
+        <br>    
+        <form ng-submit="add()" id="addRecepie-form2" class="list-card ">
             <label class="item item-input " id="addRecepie-input3">
-                <input ng-model="dish.recepie" type="text" placeholder="Maträtt">
+                <input ng-model="newRecepie" type="text" placeholder="Maträtt">
             </label>
-            <label class="item item-select " id="addRecepie-select1">
+           <label class="item item-select " id="addRecepie-select1">
                 <span class="input-label">Kategori</span>
-                <select ng-model="category.recepie">
+                <select ng-model="newCategory">
                     <option></option>
-                    <option>test</option>
-                    <option>test</option>
-                    <option>test</option>
+                    <option>Sallad</option>
+                    <option>Soppa</option>
+                    <option>Kött</option>
+                    <option>Fisk</option>
+                    <option>Vegetariskt</option>
                 </select>
             </label>
             <label class="item item-input " id="addRecepie-textarea1">
-                <input ng-model="dish.word1" type="text" placeholder="Tre"><input ng-model="dish.word2" type="text" placeholder="beskrivande"><input ng-model="dish.word3" type="text" placeholder="ord">
+                <input ng-model="newWord" type="text" placeholder="Tre nyckelord">
             </label>
-            <label class="item item-input " id="addRecepie-textarea3">
-                <span class="input-label"></span><textarea ng-model="dish.ingredient" placeholder="Ingredienser"></textarea>
+            <label class="item item-body " id="addRecepie-textarea3">
+               <textarea class="input-label" ng-model="newIngredient" placeholder="Ingredienser"></textarea>
             </label>
-            <label class="item item-input " id="addRecepie-textarea2">
-                <span class="input-label"></span><textarea ng-model="dish.instruction" placeholder="Instruktioner"></textarea>
+            <label class="item item-body " id="addRecepie-textarea2">
+                <textarea class="input-label" ng-model="newInstruction" placeholder="Instruktioner"></textarea>
             </label>
-        </form>
-        <button id="addRecepie-button1" class=" button button-positive  button-block " type="submit" ng-click="addDish">Lägg till!</button>
+        <button id="addRecepie-button1" class=" button button-positive  button-block " type="submit" ng-click="addRecepie()">Lägg till!</button>
+    </form>
 </ion-view>

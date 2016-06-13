@@ -6,13 +6,15 @@
                 <input type="search" placeholder="">
             </label>
         </form>
-        <ion-list id="dishList-list1" class=" ">
+        <ion-list id="dishList-list1" class=" " >
             <ion-item class="item-divider " id="dishList-list-item-divider1">Kategori</ion-item>
         </ion-list>
-        <ion-list id="dishList-list2" class=" ">
-            <ion-item id="dishList-list-item7" class="  ">Item 1</ion-item>
-            <ion-item id="dishList-list-item8" class="  ">Item 2</ion-item>
-            <ion-item id="dishList-list-item9" class="  ">Item 3</ion-item>
+        <ion-list id="dishList-list2" class="list-card ">
+            <ion-item id="dishList-list-item7" class="  " ng-repeat="recipe in recepies">
+                <h2> {{ newRecepie }} </h2>
+                <h3> {{ newCategory }} </h3>
+                <h4> {{ newWord }} </h4>
+            </ion-item>
         </ion-list>
     </ion-content>
 </ion-view>
