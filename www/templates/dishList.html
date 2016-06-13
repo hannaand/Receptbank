@@ -6,14 +6,19 @@
                 <input type="search" placeholder="">
             </label>
         </form>
-        <ion-list id="dishList-list1" class=" " >
+        <!--<ion-list id="dishList-list1" class=" " ng-controller="dishListCtrl" ng-repeat="recipe in recepies">
             <ion-item class="item-divider " id="dishList-list-item-divider1">Kategori</ion-item>
         </ion-list>
-        <ion-list id="dishList-list2" class="list-card ">
-            <ion-item id="dishList-list-item7" class="  " ng-repeat="recipe in recepies">
-                <h2> {{ newRecepie }} </h2>
-                <h3> {{ newCategory }} </h3>
-                <h4> {{ newWord }} </h4>
+        <ion-list id="dishList-list2" class="list ">
+            <ion-item href="#/side-menu21/page3" id="dishList-list-item7" class="  " >
+                <h2> {{ recepie.recepie }} </h2>
+            </ion-item>
+        </ion-list>-->
+        <ion-list ng-controller="dishListCtrl">
+            <ion-item href="#/side-menu21/page3"{{food:id}} ng-repeat="recepie in recepies">
+                <h2> {{recepie.recepie}} </h2>
+                <h4> {{recepie.category}} </h4>
+                <p> {{recepie.word}} </p>
             </ion-item>
         </ion-list>
     </ion-content>

@@ -4,11 +4,11 @@
         <br>    
         <form ng-submit="add()" id="addRecepie-form2" class="list-card ">
             <label class="item item-input " id="addRecepie-input3">
-                <input ng-model="newRecepie" type="text" placeholder="Maträtt">
+                <input ng-model="recepie.recepie" type="text" placeholder="Maträtt">
             </label>
            <label class="item item-select " id="addRecepie-select1">
                 <span class="input-label">Kategori</span>
-                <select ng-model="newCategory">
+                <select ng-model="recepie.category">
                     <option></option>
                     <option>Sallad</option>
                     <option>Soppa</option>
@@ -18,13 +18,13 @@
                 </select>
             </label>
             <label class="item item-input " id="addRecepie-textarea1">
-                <input ng-model="newWord" type="text" placeholder="Tre nyckelord">
+                <input ng-model="recepie.word" type="text" placeholder="Tre nyckelord">
             </label>
             <label class="item item-body " id="addRecepie-textarea3">
-               <textarea class="input-label" ng-model="newIngredient" placeholder="Ingredienser"></textarea>
+               <textarea class="input-label" ng-model="recepie.ingredient" placeholder="Ingredienser"></textarea>
             </label>
             <label class="item item-body " id="addRecepie-textarea2">
-                <textarea class="input-label" ng-model="newInstruction" placeholder="Instruktioner"></textarea>
+                <textarea class="input-label" ng-model="recepie.instruction" placeholder="Instruktioner"></textarea>
             </label>
         <button id="addRecepie-button1" class=" button button-positive  button-block " type="submit" ng-click="addRecepie()">Lägg till!</button>
     </form>

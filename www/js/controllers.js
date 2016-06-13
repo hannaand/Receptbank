@@ -10,11 +10,11 @@ angular.module('app.controllers', [])
     $scope.addRecepie = function() {
 
       recepie.$add({
-        'recepie': $scope.newRecepie,
-        'category': $scope.newCategory,  
-        'word': $scope.newWord, 
-        'ingredient': $scope.newIngredient, 
-        'instructions': $scope.newInstruction,  
+        'recepie': $scope.recepie.recepie,
+        'category': $scope.recepie.category,  
+        'word': $scope.recepie.word, 
+        'ingredient': $scope.recepie.ingredient, 
+        'instruction': $scope.recepie.instruction,  
     
     })
       //.then(function(data){  
@@ -35,7 +35,14 @@ angular.module('app.controllers', [])
 
 }])
    
-.controller('dishCtrl', function($scope) {
+.controller('dishCtrl', ['$scope', '$firebaseObject', '$firebaseArray', '$state',
+  function($scope, $firebaseObject, $firebaseArray, $state) {
 
-})
+    var ref = firebase.database().ref();
+    var food = ref.child('food');
+    var recepie = $firebaseArray(food);
+
+    $scope.recepies = recepie;
+
+}]);
     
