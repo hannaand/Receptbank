@@ -1,14 +1,14 @@
 <ion-view title="Maträtt" id="page3" class=" ">
     <ion-content padding="true" class="has-header">
-        <div class="list card " id="dish-card21" ng-controller="dishCtrl">
+        <div class="list " id="dish-card21" ng-controller="dishCtrl">
             <div class="item-avatar" id="dish-list-item10" ng-repeat="recepie in recepies">
-                <h4> {{ recepie.recepie }} </h4>
+                <h4> {{ showRecepie.recepie }} </h4>
                 <h5> {{ recepie.category }} </h5>
                 <p> {{ recepie.word }} </p>
             </div>
         </div>
         <div class="item item-body " id="dish-list-item-container2">
-            <p id="dish-null" style="margin-top:0px;color:#000000;" class=" ">Some friendly
+            <p id="dish-null" style="margin-top:0px;color:#000000;" class=" ">
                 <strong>{{ recepie.word }}</strong>
             </p>
         </div>

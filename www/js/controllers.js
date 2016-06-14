@@ -31,30 +31,23 @@ angular.module('app.controllers', [])
     var food = ref.child('food');
     var recepie = $firebaseArray(food);
 
-   // $scope.recepies = recepie;
-
-    $scope.getObjectId = function(){
-
-        $scope.recepie.$loaded()
-            .then(function(id){ 
-
-            var obj = id;
-
-            console.log(obj);          
-
-        });
-    }
+    $scope.recepies = recepie;
 
 }])
    
-.controller('dishCtrl', ['$scope', '$firebaseObject', '$firebaseArray', '$state',
-  function($scope, $firebaseObject, $firebaseArray, $state) {
+.controller('dishCtrl', ['$scope', '$firebaseObject', '$firebaseArray', '$state', '$location',
+  function($scope, $firebaseObject, $firebaseArray, $state, $location) {
 
     var ref = firebase.database().ref();
     var food = ref.child('food');
     var recepie = $firebaseArray(food);
+    var key = location.hash.split('#/')[1];
+    var recepieRef = ref.child(key);
+    var showRecepies = [];
 
-    $scope.recepies = recepie;
+    showRecepies.push($firebaseObject(recepieRef));
+  
+    $scope.showRecepies = showRecepies; 
 
 }]);
     
