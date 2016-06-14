@@ -31,7 +31,19 @@ angular.module('app.controllers', [])
     var food = ref.child('food');
     var recepie = $firebaseArray(food);
 
-    $scope.recepies = recepie;
+   // $scope.recepies = recepie;
+
+    $scope.getObjectId = function(){
+
+        $scope.recepie.$loaded()
+            .then(function(id){ 
+
+            var obj = id;
+
+            console.log(obj);          
+
+        });
+    }
 
 }])
    
