@@ -15,7 +15,7 @@
             </ion-item>
         </ion-list>-->
         <ion-list ng-controller="dishListCtrl">
-            <ion-item href="#/side-menu21/page3" ng-repeat="recepie in recepies">
+            <ion-item href="#/side-menu21/page3{{recepie.$id}}" ng-repeat="recepie in recepies">
                 <h2> {{recepie.recepie}} </h2>
                 <h4> {{recepie.category}} </h4>
                 <p> {{recepie.word}} </p>
